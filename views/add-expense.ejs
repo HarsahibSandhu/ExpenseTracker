@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Expense</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <h1>Add a New Expense</h1>
+  <form action="/expenses/add" method="POST">
+    <label>Description:</label>
+    <input type="text" name="description" required>
+    <br>
+    <label>Amount:</label>
+    <input type="number" name="amount" required>
+    <br>
+    <label>Paid By (Participant ID):</label>
+    <input type="number" name="paid_by" required>
+    <br>
+    <button type="submit">Add Expense</button>
+  </form>
+</body>
+</html>
