@@ -12,13 +12,19 @@
       <th>Amount</th>
       <th>Paid By</th>
     </tr>
-    <% expenses.forEach(function(expense) { %>
+    <% if (expenses.length > 0) { %>
+      <% expenses.forEach(function(expense) { %>
+        <tr>
+          <td><%= expense.description %></td>
+          <td><%= expense.amount %></td>
+          <td><%= expense.paid_by %></td>
+        </tr>
+      <% }) %>
+    <% } else { %>
       <tr>
-        <td><%= expense.description %></td>
-        <td><%= expense.amount %></td>
-        <td><%= expense.paid_by %></td>
+        <td colspan="3">No expenses found.</td>
       </tr>
-    <% }) %>
+    <% } %>
   </table>
   <a href="/expenses/add">Add New Expense</a>
 </body>
